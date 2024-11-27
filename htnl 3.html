@@ -100,14 +100,15 @@
 
 <script>
   const products = [
-  { 
-    id: 1, 
-    name: "Red Roses Bouquet", 
-    price: 25, 
-    image: "photo.jpg",  // Relative path to the image
-    description: "A beautiful bouquet of fresh red roses." 
-  },
-    ];
+    { 
+      id: 1, 
+      name: "Red Roses Bouquet", 
+      price: 25, 
+      image: "images/photo.jpg",  // Ensure this path is correct or place the image in an 'images' folder
+      description: "A beautiful bouquet of fresh red roses." 
+    },
+    // Add other products here if needed
+  ];
 
   const ownerWhatsAppNumber = "919342913781";
 
@@ -123,7 +124,7 @@
       const productCard = document.createElement("div");
       productCard.className = "product";
       productCard.innerHTML = `
-        <img src="${product.image}" alt="${product.name}">
+        <img src="${product.image}" alt="${product.name}" onerror="this.src='images/placeholder.jpg'"> <!-- Placeholder if image doesn't load -->
         <h2>${product.name}</h2>
         <p>${product.description}</p>
         <p>Price: $${product.price}</p>
