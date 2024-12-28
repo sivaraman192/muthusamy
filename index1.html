@@ -56,10 +56,10 @@
     }
 
     .product img {
-      max-width: 50%;
+      max-width: 100%;
       height: auto;
       border-radius: 8px;
-      border: 3px solid #a8dd9d; /* Border matching theme color */
+      border: 3px solid #4CAF50; /* Border matching theme color */
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
@@ -127,56 +127,14 @@
       id: 1, 
       name: "Red Roses Bouquet", 
       price: 25, 
-      image: "photo.jpg", // Relative path to the image
+      image: "https://sivaraman192.github.io/photo.jpg", // Corrected example URL
       description: "A beautiful bouquet of fresh red roses." 
     },
     { 
       id: 2, 
       name: "Rose and Nanthiyavattai Garland", 
       price: 35, 
-      image: "jyothika malai.jpg", // Relative path to the image
-      description: "A lovely combination of roses and nanthiyavattai flowers." 
-    },
-    { 
-      id: 2, 
-      name: "Rose and Nanthiyavattai Garland", 
-      price: 35, 
-      image: "white rose and nanthiyavattai.jpg", // Relative path to the image
-      description: "A lovely combination of roses and nanthiyavattai flowers." 
-    },
-    { 
-      id: 2, 
-      name: "Rose and Nanthiyavattai Garland", 
-      price: 35, 
-      image: "rose with Nanthiyavattai wedding.jpg", // Relative path to the image
-      description: "A lovely combination of roses and nanthiyavattai flowers." 
-    },
-    { 
-      id: 2, 
-      name: "Rose and Nanthiyavattai Garland", 
-      price: 35, 
-      image: "chololate(3 feet).jpg", // Relative path to the image
-      description: "A lovely combination of roses and nanthiyavattai flowers." 
-    },
-    { 
-      id: 2, 
-      name: "Rose and Nanthiyavattai Garland", 
-      price: 35, 
-      image: "nuts(munthiri).jpg", // Relative path to the image
-      description: "A lovely combination of roses and nanthiyavattai flowers." 
-    },
-    { 
-      id: 2, 
-      name: "Rose and Nanthiyavattai Garland", 
-      price: 35, 
-      image: "WhatsApp Image 2024-11-08 at 23.26.44_7d940902.jpg", // Relative path to the image
-      description: "A lovely combination of roses and nanthiyavattai flowers." 
-    },
-    { 
-      id: 2, 
-      name: "Rose and Nanthiyavattai Garland", 
-      price: 35, 
-      image: "Screenshot 2024-11-09 001415.png", // Relative path to the image
+      image: "https://sivaraman192.github.io/jyothika%20malai.jpg", // Fixed URL
       description: "A lovely combination of roses and nanthiyavattai flowers." 
     },
   ];
@@ -185,7 +143,7 @@
 
   function addToCartAndMessage(productId) {
     const product = products.find(p => p.id === productId);
-    const message = `Hello, I would like to purchase the following product: %0A%0A*Product Name*: ${product.name}%0A*Price*: $${product.price}%0A*Description*: ${product.description}%0A%0AIs it available?`;
+    const message = `Hello, I would like to purchase the following product: %0A%0A*Product Name*: ${product.name}%0A*Price*: $${product.price}%0A*Description*: ${product.description}%0A*Image*: ${product.image}%0A%0AIs it available?`;
     window.open(`https://wa.me/${ownerWhatsAppNumber}?text=${message}`, "_blank");
   }
 
